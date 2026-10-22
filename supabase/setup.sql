@@ -18,23 +18,23 @@ drop policy if exists "Owner can read all server info" on public.server_info;
 create policy "Owner can read all server info"
 on public.server_info for select
 to authenticated
-using (auth.uid() = 'REPLACE_WITH_OWNER_USER_UUID'::uuid);
+using (auth.uid() = 'd47171a8-a09c-4afa-b643-24f66a9a9d2b'::uuid);
 
 drop policy if exists "Owner can insert server info" on public.server_info;
 create policy "Owner can insert server info"
 on public.server_info for insert
 to authenticated
-with check (auth.uid() = 'REPLACE_WITH_OWNER_USER_UUID'::uuid);
+with check (auth.uid() = 'd47171a8-a09c-4afa-b643-24f66a9a9d2b'::uuid);
 
 drop policy if exists "Owner can update server info" on public.server_info;
 create policy "Owner can update server info"
 on public.server_info for update
 to authenticated
-using (auth.uid() = 'REPLACE_WITH_OWNER_USER_UUID'::uuid)
-with check (auth.uid() = 'REPLACE_WITH_OWNER_USER_UUID'::uuid);
+using (auth.uid() = 'd47171a8-a09c-4afa-b643-24f66a9a9d2b'::uuid)
+with check (auth.uid() = 'd47171a8-a09c-4afa-b643-24f66a9a9d2b'::uuid);
 
 drop policy if exists "Owner can delete server info" on public.server_info;
 create policy "Owner can delete server info"
 on public.server_info for delete
 to authenticated
-using (auth.uid() = 'REPLACE_WITH_OWNER_USER_UUID'::uuid);
+using (auth.uid() = 'd47171a8-a09c-4afa-b643-24f66a9a9d2b'::uuid);
